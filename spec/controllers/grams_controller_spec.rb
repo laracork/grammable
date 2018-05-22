@@ -147,7 +147,6 @@ RSpec.describe GramsController, type: :controller do
   end
 
   describe "grams#create action" do
-
     it "should require users to be logged in" do
       post :create, params: { gram: { message: "Hello" } }
       expect(response).to redirect_to new_user_session_path
